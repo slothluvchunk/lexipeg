@@ -1,0 +1,20 @@
+.word-length-selector {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.word-length-selector__btn {
+  padding: 4px 8px;
+  font-size: 11px;
+  font-family: var(--font-body);
+  color: var(--color-text-dim);
+  background: var(--color-surface);
+  transition: color 0.2s, background 0.2s;
+}
+
+.word-length-selector__btn--active {
+  background: var(--color-border);
+  color: var(--color-exact);
+}

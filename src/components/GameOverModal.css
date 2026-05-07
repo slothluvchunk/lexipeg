@@ -1,0 +1,59 @@
+.game-over-modal {
+  text-align: center;
+}
+
+.modal__title--win {
+  color: var(--color-exact);
+}
+
+.modal__title--loss {
+  color: var(--color-present);
+  text-shadow: 0 0 8px rgba(255, 45, 149, 0.5);
+}
+
+.game-over-word {
+  margin-bottom: 16px;
+  color: var(--color-text-dim);
+  font-size: 14px;
+}
+
+.game-over-word__reveal {
+  color: var(--color-present);
+  font-size: 18px;
+  display: block;
+  margin-top: 4px;
+  text-shadow: 0 0 8px rgba(255, 45, 149, 0.5);
+}
+
+.game-over-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--color-text-dim);
+  margin-bottom: 20px;
+}
+
+.game-over-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.share-btn, .game-over-new-btn {
+  padding: 10px 20px;
+  border: 1px solid var(--color-exact);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-exact);
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.share-btn:hover, .game-over-new-btn:hover {
+  background: var(--color-exact);
+  color: #0a0a12;
+}

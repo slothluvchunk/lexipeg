@@ -1,0 +1,44 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.1);
+  position: relative;
+}
+
+.modal__title {
+  font-size: 18px;
+  color: var(--color-exact);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 18px;
+  color: var(--color-text-dim);
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.modal__close:hover {
+  color: var(--color-text);
+}

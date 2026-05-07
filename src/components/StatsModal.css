@@ -1,0 +1,75 @@
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stats-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stats-grid__value {
+  font-size: 28px;
+  color: var(--color-exact);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.stats-grid__label {
+  font-size: 11px;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.guess-distribution {
+  margin-bottom: 16px;
+}
+
+.guess-distribution__title {
+  font-size: 12px;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.guess-distribution__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.guess-distribution__num {
+  width: 16px;
+  text-align: right;
+  font-size: 13px;
+  color: var(--color-text-dim);
+}
+
+.guess-distribution__bar-bg {
+  flex: 1;
+  height: 20px;
+}
+
+.guess-distribution__bar {
+  height: 100%;
+  background: var(--color-exact);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  font-size: 12px;
+  color: #0a0a12;
+  min-width: 4%;
+  transition: width 0.5s ease;
+}
+
+.stats-avg {
+  font-size: 12px;
+  color: var(--color-text-dim);
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+.win-celebration {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.win-celebration__particle {
+  position: absolute;
+  top: -10px;
+  width: 6px;
+  height: 6px;
+  background: hsl(var(--hue, 180deg), 100%, 60%);
+  box-shadow: 0 0 6px hsl(var(--hue, 180deg), 100%, 60%);
+  animation: particle-fall 1.5s ease-in forwards;
+}
+
+@keyframes particle-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+.win-celebration__glitch-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(24px, 6vw, 48px);
+  font-family: var(--font-display);
+  color: var(--color-exact);
+  text-shadow: 0 0 20px var(--color-exact), 0 0 40px rgba(0, 240, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  animation: glitch-text 0.3s ease infinite;
+}
+
+@keyframes glitch-text {
+  0%, 90%, 100% { transform: translate(-50%, -50%) skew(0deg); }
+  92% { transform: translate(-48%, -50%) skew(-2deg); color: var(--color-present); }
+  94% { transform: translate(-52%, -50%) skew(2deg); }
+  96% { transform: translate(-50%, -50%) skew(0deg); }
+}

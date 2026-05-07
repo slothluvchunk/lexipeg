@@ -1,0 +1,22 @@
+.mode-switcher {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mode-switcher__btn {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-family: var(--font-body);
+  color: var(--color-text-dim);
+  background: var(--color-surface);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s, background 0.2s;
+}
+
+.mode-switcher__btn--active {
+  background: var(--color-border);
+  color: var(--color-text);
+}

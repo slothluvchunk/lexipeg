@@ -1,0 +1,66 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.keyboard__row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.keyboard-key {
+  height: 58px;
+  min-width: 36px;
+  padding: 0 6px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13px;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
+  flex: 1;
+  max-width: 44px;
+}
+
+.keyboard-key--wide {
+  flex: 1.5;
+  max-width: 66px;
+  font-size: 11px;
+}
+
+.keyboard-key--exact {
+  background: var(--color-exact);
+  border-color: var(--color-exact);
+  color: #0a0a12;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+.keyboard-key--present {
+  background: var(--color-present);
+  border-color: var(--color-present);
+  color: #0a0a12;
+  box-shadow: 0 0 8px rgba(255, 45, 149, 0.5);
+}
+
+.keyboard-key--absent {
+  background: #1a1a2a;
+  border-color: #1a1a2a;
+  color: var(--color-text-dim);
+}
+
+.keyboard-key:active {
+  transform: scale(0.95);
+}
