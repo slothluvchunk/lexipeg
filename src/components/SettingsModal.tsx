@@ -29,7 +29,7 @@ export function SettingsModal({ onClose }: SettingsModalProps) {
     if (!url) return;
     setLoadStatus('loading');
     try {
-      const words = await previewUrlWords(url, settings.wordLength);
+      const words = await previewUrlWords(url, settings.wordLength, new Set());
       setSourceUrl(url);
       setWordCount(words.length);
       setLoadStatus(words.length > 0 ? 'success' : 'empty');

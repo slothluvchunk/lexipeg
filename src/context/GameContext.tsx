@@ -140,6 +140,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   const submitGuess = useCallback(() => {
     if (!setup || status !== 'in-progress' || isRevealing) return;
     if (currentGuess.length !== settings.wordLength) {
+      window.dispatchEvent(new CustomEvent('lexipeg:invalid-guess'));
       addToast('Not enough letters');
       return;
     }
@@ -148,6 +149,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     if (settings.hardMode && guesses.length > 0) {
       const violation = checkHardModeViolation(currentGuess, guesses);
       if (violation) {
+        window.dispatchEvent(new CustomEvent('lexipeg:invalid-guess'));
         addToast(`Hard mode: ${violation.message}`);
         return;
       }
@@ -155,7 +157,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
 
     const result = setup.session.submitGuess(currentGuess);
     if (typeof result === 'string') {
-      // InvalidGuessReason
+      window.dispatchEvent(new CustomEvent('lexipeg:invalid-guess'));
       if (result === 'validation-failed') addToast('Not in word list');
       else if (result === 'wrong-length') addToast('Not enough letters');
       else if (result === 'duplicate-not-allowed') addToast('No duplicate letters');
